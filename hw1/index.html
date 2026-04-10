@@ -1,17 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>About my hobby</title>
+    <script src="main.js"></script>
+    <title>About my pet</title>
 </head>
-<body>
+<body class="body">
     <header>
-        <h1>Hi!</h1>
-        <h2>This webpage is dedicated to my hobby</h2>
+        <h1 class="title">My loved pet</h1>
+        <nav class="navigation">
+            <a href="#WhoIsMyPet?" class="link">Who is my pet?</a>
+            <a href="#PetNature" class="link">Pet's nature</a>
+            <a href="#PetFavouriteFood" class="link" style="margin: 0 auto;">Pet's favourite food</a>
+        </nav>
     </header>
     <main>
+        <section class="section" id="WhoIsMyPet?">
+            <h2 class="title">Who is my pet?</h2>
+            <table>
+                <tr>
+                    <td><img src="photos/mainRabbit.png" id="mainPhoto"></td>
+                    <td>
+                        <p>Let's meet. This is our rabbit.</p>
+                        <p>Actually, he don't have a name, because 
+                        he was a gift to my sister <br> for her birthday and she was to small to give 
+                        a name. So, nobody <br> gave a name and we call him just "Krolik" or "Krolyan".</p> 
+                        <p>He live with us more then 3 years and became a really important part <br> of our family</p>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+        <section class="section" id="PetNature">
+            <h2 class="title">Pet's nature</h2>
+            <div id="scratchMessage" style="position: absolute; left: 220px;">Try to scratch...</div>
+            <table>
+                <tr>
+                    <td>
+                        <img src="photos/scratchRabbit.png" id="scratchRabbit">
+                    </td>
+                    <td>
+                        <p>My rabbit really enjoy when you scratch him</p>
+                        <p>But you need to scratch carefully. If you don't scratch good, he will bite you!</p>
+                        <p>Let's do it together</p>
+                    </td>
+                </tr>
+            </table>
+            <button id="earButton">ear</button>
+            <button id="tailButton">tail</button>
+            <button id="pawButton">paw</button>
+            <button id="bellyButton">belly</button>  
+        </section>
+        <section class="section" id="PetFavouriteFood">
+            <h2 class="title">Pet's favourite food</h2>
+            <div id="feedMessage" style="position: absolute; left: 100px;">My rabbit is hungry. Feed him!</div>
+            <table>
+                <tr>
+                    <td>
+                        <img src="photos/feedRabbit.png"  alt="hungry rabbit "id="feedRabbit">
+                        
+                    </td>
+                    <td>
+                        <img src="photos/cucumber.png" alt="cucumber" class="image">
+                        <button id="cucumber">give (3 left)</button>
+                    </td>
+                    <td>
+                        <img src="photos/hay.png" alt="hay" class="image">
+                        <button id="hay">give (20 left)</button>
+                    </td>
+                    <td>
+                        <img src="photos/strawbbery.png" alt="strewberry" class="image">
+                        <button id="strawberry">give (2 left)</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
 
     </main>
     <footer>

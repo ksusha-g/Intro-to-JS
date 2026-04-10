@@ -1,0 +1,88 @@
+.body {
+    background-color: rgba(152, 199, 142, 0.641);
+    font-family: cursive;
+}
+
+.navigation {
+    text-align: center;
+    background-color: rgba(152, 199, 142, 0.838);
+}
+
+.title {
+    background-color: rgba(152, 199, 142, 0.838);
+    text-align: center;
+}
+
+.link {
+    color:rgba(0, 0, 0, 0.63);
+    text-decoration: none;
+}
+
+.link:hover{
+    color: rgb(35, 59, 92);
+}
+
+.section {
+    position: relative;
+}
+
+.image {
+    width: 150px;
+    padding-bottom: 100px;
+}
+
+#earButton {
+    position: absolute;
+    bottom: 230px;
+    left: 330px;
+}
+
+#tailButton {
+    position: absolute;
+    bottom: 200px;
+    left: 50px;
+}
+
+#pawButton {
+    position: absolute;
+    bottom: 50px;
+    left: 360px;
+}
+
+#bellyButton {
+    position: absolute;
+    bottom: 180px;
+    left: 250px;
+}
+
+#mainPhoto {
+    width: 500px;
+    bottom: 400px
+}   
+
+#scratchRabbit {
+    width: 500px;
+    left: 200px;
+}
+
+#feedRabbit {
+    width: 400px;
+}
+
+#cucumber {
+    position: absolute; 
+    left: 440px;
+    top: 370px;
+}
+
+#hay {
+    position: absolute; 
+    left: 590px;
+    top: 370px;
+}
+
+#strawberry {
+    position: absolute; 
+    left: 750px;
+    top: 370px;
+}
