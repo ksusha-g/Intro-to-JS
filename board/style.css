@@ -1,0 +1,51 @@
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.page-grid {
+
+}
+
+header {
+    padding-top: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .link {
+    font-size: 10px;
+    transition: opacity 0.2s;
+}
+
+.link:hover {
+    opacity: 0.4;
+} */
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: gray;
+    margin-top: 30px;
+}
+
+.about-me {
+    background-color: rgb(182, 181, 181);
+    height: 300px;
+}
+
+.text1 {
+    text-align: center;
+}
+
+.text2 {
+    margin-top: 30px;
+}
+
+.portfolio {
+    
+}
