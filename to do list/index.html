@@ -7,14 +7,19 @@
     <title>My to do list</title>
 </head>
 <body>
-    <input type="text"
-    id="task-input"
-    placeholder="Введите задачу...">
-    <button class="button" id="task-button">Добавить</button>
-    <div class="container" id="to-do-list">
+    <div class="container" style="width: 300px;">
+        <input type="text"
+        id="task-input"
+        placeholder="Введите задачу...">
+        <button class="button" id="task-button">Добавить</button>
+        <div><ul class="container" id="to-do-list">
+        </ul></div>
     </div>
-    <button class="button" id="delete-last">Удалить последнее</button>
-
+    <div class="container" id="sorting">
+        <p>Сортировка:</p>
+        <p><input type="checkbox" id="done">Выполнено</p>
+        <p><input type="checkbox" id="not-done">Не выполнено</p>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+.container {
+    display: inline-block;
+    vertical-align: top;
+    background-color: rgb(182, 192, 232);
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.elem {
+    word-break: break-all;
+    max-width: 245px;
+}
