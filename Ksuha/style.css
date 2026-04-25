@@ -1,0 +1,10 @@
+.container {
+    background-color: aquamarine;
+    text-align: center;
+    width: 500px;
+}
+
+.btn {
+    width: 83px;
+    margin-top: 10px;
+}
