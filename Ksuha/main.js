@@ -12,7 +12,9 @@ function start(value) {
     number = Math.floor(Math.random() * 101)
     console.log(number)
     consl.innerHTML = ''
-    guess(value)
+    a_number = 0
+    attempts.innerHTML = (`Попыток: ${a_number}`)
+    if (value != '') { guess(value) }
 
 }
 
