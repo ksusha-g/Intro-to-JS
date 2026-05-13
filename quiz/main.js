@@ -1,21 +1,14 @@
-let prev = document.getElementById('prev-question')
 let next = document.getElementById('next-question')
 let start = document.getElementById('start')
+let again = document.getElementById('again')
+let results = document.getElementById('results')
+let alertMessage = document.getElementById('alert')
+let resultMenu = document.getElementById("result")
 let answers = document.getElementById('answers')
+let currQuestion = document.getElementById('question')
 
-prev.style.display = 'none'
-next.style.display = 'none'
-answers.style.display = 'none'
-
-start.addEventListener('click', () => {
-    prev.style.display = 'flex'
-    next.style.display = 'flex'
-    answers.style.display = 'flex'
-    start.style.display = 'none'
-
-})
-
-
+let questionNumber = 0
+let correctAnswers = 0
 
 let quiz = [
     {
@@ -69,3 +62,80 @@ let quiz = [
         correct: 'Зеленый'
     }
 ]
+
+next.style.display = 'none'
+answers.style.display = 'none'
+again.style.display = 'none'
+results.style.display = 'none'
+alertMessage.style.display = 'none'
+
+start.addEventListener('click', () => startGame())
+
+function startGame(){
+    questionNumber = 0
+    currQuestion.style.display = 'flex'
+    next.style.display = 'flex'
+    answers.style.display = 'flex'
+    start.style.display = 'none'
+    again.style.display = 'none'
+    resultMenu.style.display = 'none'
+    generateQuestion(questionNumber)
+}
+
+function generateQuestion(num){
+    answers.replaceChildren()
+    currQuestion.innerHTML = quiz[num].question
+    for (let i=0; i<3; i++){
+
+        let newP = document.createElement('input')
+        newP.type = 'radio'
+        newP.id = `${num}${i}`
+        newP.name = `q${num}`
+        newP.value = quiz[num].options[i]
+
+        let label = document.createElement('label')
+        label.for = `${num}${i}`
+        label.textContent = quiz[num].options[i]
+
+        answers.appendChild(newP)
+        answers.appendChild(label)
+    }
+
+    questionNumber += 1
+}
+
+next.addEventListener('click', () => {
+    checkAnswer()
+
+    if (questionNumber == 9){
+        next.style.display = 'none'
+        next.style.display = 'none'
+        results.style.display = 'flex'
+    }
+    alertMessage.style.display = 'none'
+    generateQuestion(questionNumber)
+})
+
+function checkAnswer(){
+    namee = `q${questionNumber-1}`
+    let selected = answers.querySelector(`input[name = "${namee}"]:checked`)
+    if (selected.value && selected.value == quiz[questionNumber-1].correct) {correctAnswers += 1}
+}
+
+results.addEventListener('click', () => {
+    results.style.display = 'none'
+    again.style.display = 'flex'
+    answers.style.display = 'none'
+    currQuestion.style.display = 'none'
+    showResults()
+})
+
+function showResults(){
+    resultMenu.style.display = 'flex'
+    resultMenu.innerHTML = `Correct answers: ${correctAnswers}`
+}
+
+again.addEventListener('click', () => startGame())
+
+
+

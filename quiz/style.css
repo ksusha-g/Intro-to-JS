@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css?family=Didact+Gothic|Comfortaa:400,700&subset=latin,cyrillic);
+*, *:before, *:after {
+   box-sizing: border-box
+}
+
+body {
+    font-family: 'Comfortaa', cursive;
+}
+button {
+    border-radius: 10px;
+    border-color: rgb(255, 159, 207);
+    background: rgb(255, 159, 207);
+    padding: 10px 15px;
+}
+
+button:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #e54eca;
+}
+
+#answers {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#body {
+    width: 400px;
+    height: 500 px;
+    background-color: #F5F5DC;
+}

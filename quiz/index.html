@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="question"></div>
-    <select name="answer" id="answers">
-
-    </select>
-    <button id="prev-question">Previous question</button>
-    <button id="next-question">Next question</button>
-    <button id="start">Start</button>
-
+    <div id="body">
+        <div id="question"></div>
+        <form id="answers"></form>
+        <p id="alert">Не выбран ни один вариант ответа!</p>
+        <button id="next-question">Next question</button>
+        <button id="start">Start</button>
+        <p id="result"></p>
+        <button id="again">Again</button>
+        <button id="results">Results</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
