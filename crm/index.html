@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CRM Система</h1>
+        <div class="controls-panel">
+            <div class="control-group">
+                <label for="search-input">Поиск по имени:</label>
+                <input type="text" id="search-input" placeholder="Введите имя...">
+            </div>
+
+            <div class="control-group">
+                <label for="status-filter">Фильтр по статусу:</label>
+                <select id="status-filter">
+                    <option value="">Все статусы</option>
+                    <option value="new">Новый</option>
+                    <option value="inWork">В работе</option>
+                    <option value="closed">Закрыт</option>
+                    <option value="hot">Горящий</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="sort-by">Сортировать по:</label>
+                <select id="sort-by">
+                    <option value="">Без сортировки</option>
+                    <option value="name-asc">Имя (А-Я)</option>
+                    <option value="name-desc">Имя (Я-А)</option>
+                    <option value="budget-asc">Бюджет (возр.)</option>
+                    <option value="budget-desc">Бюджет (убыв.)</option>
+                    <option value="status-asc">Статус (А-Я)</option>
+                    <option value="status-desc">Статус (Я-А)</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="leads-container" class="leads-grid"></div>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
