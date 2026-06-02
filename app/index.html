@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Менеджер задач</title>
+  <style>
+    body { 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        max-width: 500px; 
+        margin: 50px auto; 
+        padding: 20px; 
+        background-color: #f4f7f6;
+    }
+
+    h1 {text-align: center; color: #333;}
+    .input-row {display: flex; gap: 10px; margin-bottom: 20px;}
+    input { flex: 1; padding: 8px; font-size: 16px; }
+    button#addBtn { 
+        padding: 10px 20px; 
+        background: #4a90e2; 
+        color: white; 
+        border: none; 
+        border-radius: 8px; 
+        cursor: pointer; 
+        font-weight: bold;
+    }
+    button#addBtn:hover { background: #357abd; }
+    .task { 
+        background: white;
+        padding: 15px; 
+        border-radius: 8px; 
+        margin-bottom: 10px; 
+        display: flex; 
+        align-items: center; 
+        gap: 12px; 
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        transition: transform 0.2s;
+    }
+    .task.done { 
+        background: #f9f9f9;
+        opacity: 0.6; 
+        text-decoration: line-through; 
+    }
+    .task-text {flex: 1; cursor: pointer; }
+    .task button { 
+        background: #ff5f5f; 
+        color: white; 
+        border: none; 
+        padding: 5px 10px; 
+        border-radius: 5px; 
+        cursor: pointer; 
+    }
+    .task button:hover { background: #e04a4a; }
+    .stats { 
+        padding: 15px; 
+        background: #333; 
+        color: white; 
+        border-radius: 8px; 
+        text-align: center; 
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Менеджер задач</h1>
+ 
+  <div class="input-row">
+    <input type="text" id="taskInput" placeholder="Что нужно сделать?">
+    <button id="addBtn">Добавить</button>
+  </div>
+ 
+  <div class="stats" id="stats"></div>
+  <div id="tasksList"></div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
